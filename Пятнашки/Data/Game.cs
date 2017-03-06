@@ -16,17 +16,17 @@ namespace Gameof15.Data
 
             var N = Math.Sqrt(n.Length);
             // Проверка на целое ли число 
-            
-            if (Math.Sqrt(n.Length) - Math.Truncate(Math.Sqrt(n.Length)) == 0) 
+
+            if (Math.Sqrt(n.Length) - Math.Truncate(Math.Sqrt(n.Length)) == 0)
             {
                 GameArea = new int[(int)N, (int)N];
-                           
+
                 for (int i = 0; i < N; i++)
                 {
                     for (int j = 0; j < N; j++)
                     {
                         GameArea[i, j] = n[k];
-                        k++;                 
+                        k++;
                     }
                 }
             }
@@ -40,7 +40,7 @@ namespace Gameof15.Data
                 {
                     if (value == GameArea[i, j])
                     {
-                        return new KeyValuePair<int, int>(i, j);                       
+                        return new KeyValuePair<int, int>(i, j);
                     }
                 }
             }
@@ -61,6 +61,11 @@ namespace Gameof15.Data
             }
             return null;
         }
+        
+        public void Shift(int value)
+        {
+            
+        }    
 
         public KeyValuePair<int, int>? this[int value]
         {
